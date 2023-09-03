@@ -13,6 +13,7 @@ class Cell:
             self._cell_options = [i == number for i in range(Cell.SIZE + 1)]
             self._remaining_options_amount = 1
 
+    @property
     def is_finished(self) -> bool:
         return self.number is not None
 
