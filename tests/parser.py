@@ -20,4 +20,4 @@ def get_board(name: str) -> Board:
     return b
 
 
-get_board('test.txt')
+get_board('tests.txt')
