@@ -1,6 +1,6 @@
 from inputs.parser import get_board
 import random
-from classes.solver import solve_board_recursive
+from sudoku_solver.classes.solver import solve_board_recursive
 from inputs.special_sodukus.the_ring.creator import board
 
 random.seed(0)
