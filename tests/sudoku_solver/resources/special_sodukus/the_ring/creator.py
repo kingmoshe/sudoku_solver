@@ -1,4 +1,4 @@
-from parser import get_board
+from sudoku_solver.utils.parser import get_board
 from sudoku_solver.classes.groups.arrow_group import ArrowGroup
 from sudoku_solver.classes.groups.consecutive_group import ConsecutiveGroup
 
