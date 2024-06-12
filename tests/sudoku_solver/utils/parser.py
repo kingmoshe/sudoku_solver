@@ -9,7 +9,7 @@ from sudoku_solver.classes.position import Position
 def get_board(name: str) -> Board:
     b = NormalBoard()
     cur_path = Path(os.path.abspath(__file__))
-    path = cur_path.parent / 'sodukus' / name
+    path = cur_path.parent.parent / 'resources' / 'sodukus' / name
     with open(path, 'r') as f:
         lines = f.readlines()
     lines = [list(map(int, line.replace('\n', '').split())) for line in lines]
@@ -18,6 +18,3 @@ def get_board(name: str) -> Board:
             if lines[i][j] != 0:
                 b.add_num(Position(i, j), lines[i][j])
     return b
-
-
-get_board('tests.txt')
