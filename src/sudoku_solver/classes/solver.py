@@ -2,14 +2,12 @@ from copy import deepcopy
 import random
 import time
 
-from utils.time_calculator import calc_time
+from sudoku_solver.utils.time_calculator import calc_time
 
 from sudoku_solver.classes.cell import Cell
 from sudoku_solver.classes.board import Board
 from sudoku_solver.classes.groups.line_group import LineGroup
 from sudoku_solver.classes.groups.full_group import FullGroup
-from sudoku_solver.classes.groups.unique_group import UniqueGroup
-from sudoku_solver.classes.groups.arrow_group import ArrowGroup
 
 START_TIME = time.time()
 COPY_TIME = [0]
@@ -23,8 +21,6 @@ def solve_board_recursive(b: Board, amount_of_steps, best_guesses_size):
         return
     guess_times = 0
     while not b.is_solved():
-        #print(amount_of_steps, b.get_value(), guess_times, time.time() - START_TIME, LineGroup.TIME, FullGroup.TIME,
-         #     UniqueGroup.TIME, FullGroup.FIND_COUPLES_TIME, FullGroup.GET_COUNTER_TIME)
         print(time.time() - START_TIME, FullGroup.TIME, FullGroup.GET_COUNTER_TIME, FullGroup.FIND_COUPLES_TIME)
         wrong_guess = None
         best_guesses = []
