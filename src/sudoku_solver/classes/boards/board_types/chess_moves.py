@@ -1,6 +1,6 @@
 from typing import List, Tuple
 from sudoku_solver.classes.boards.board import Board
-from sudoku_solver.classes.groups.line_group import LineGroup
+from sudoku_solver.classes.groups.unique_group import UniqueGroup
 
 KNIGHT_VECTORS: List[Tuple[int, int]] = [(1, -2), (2, -1), (2, 1),
                                          (1, 2)]  # Only one direction (to not add the same group twice)
@@ -24,7 +24,7 @@ def _add_chess_move_board_group(board: Board, move_vectors: List[Tuple[int, int]
                 if min(new_line_id, new_column_id) < 0:
                     continue
                 group_cells = [board.cells[line_id][column_id], board.cells[new_line_id][new_column_id]]
-                board.add_group(LineGroup(group_cells))
+                board.add_group(UniqueGroup(group_cells))
 
 
 def add_knight_move_board_groups(board: Board) -> None:
