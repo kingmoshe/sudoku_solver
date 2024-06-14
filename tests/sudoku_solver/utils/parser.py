@@ -2,12 +2,13 @@ from pathlib import Path
 import os
 
 from sudoku_solver.classes.boards.board import Board
-from sudoku_solver.classes.boards.board_types.normal_board import NormalBoard
+from sudoku_solver.classes.boards.board_types.normal_board import add_normal_board_groups
 from sudoku_solver.classes.position import Position
 
 
 def get_board(name: str) -> Board:
-    b = NormalBoard()
+    b = Board()
+    add_normal_board_groups(b)
     cur_path = Path(os.path.abspath(__file__))
     path = cur_path.parent.parent / "resources" / "sodukus" / name
     with open(path, "r") as f:
