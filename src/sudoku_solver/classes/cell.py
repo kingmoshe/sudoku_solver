@@ -1,5 +1,5 @@
 from time import time
-from typing import List
+from typing import Set
 
 from sudoku_solver.classes.position import Position
 from sudoku_solver.classes.exceptions.empty_cell import EmptyCell
@@ -42,7 +42,7 @@ class Cell:
         return True
 
     @property
-    def digits(self) -> List[int]:
+    def digits(self) -> Set[int]:
         start_time = time()
         if self.bin_representation not in Cell.KEYS_TO_DIGITS:
             Cell.KEYS_TO_DIGITS[self.bin_representation] = {
