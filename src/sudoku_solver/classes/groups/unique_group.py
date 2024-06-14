@@ -6,6 +6,9 @@ from sudoku_solver.classes.groups.group import Group
 
 
 class UniqueGroup(Group):
+    """
+    Unique group is a group of cells the each cell should have a different value.
+    """
     TIME = 0
 
     def __init__(self, cells: List[Cell]):
