@@ -32,7 +32,7 @@ def add_boxes_groups_to_board(board: Board) -> None:
 
 def add_normal_board_groups(board: Board) -> None:
     """
-    Add normal board groups (line, column, boxes) same as in a standart sudoku
+    Add normal board groups (line, column, boxes) same as in a standard sudoku
     """
     add_line_groups_to_board(board)
     add_column_groups_to_board(board)
