@@ -4,10 +4,10 @@ from sudoku_solver.classes.solver import solve_board_recursive
 from inputs.special_sodukus.the_ring.creator import board
 
 random.seed(0)
-#board = get_board('hard.txt')
-#board.solve_while_can()
+# board = get_board('hard.txt')
+# board.solve_while_can()
 solve_board_recursive(board, 1, 3)
-#solve_board(board)
+# solve_board(board)
 print(board)
 cells = []
 for i in range(9):

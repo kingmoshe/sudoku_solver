@@ -14,4 +14,8 @@ class BoardVal:
         return False
 
     def __repr__(self):
-        return '(' + ', '.join(map(str, [value for key, value in self.counter.items()])) + ')'
+        return (
+            "("
+            + ", ".join(map(str, [value for key, value in self.counter.items()]))
+            + ")"
+        )

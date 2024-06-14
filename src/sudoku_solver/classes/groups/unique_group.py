@@ -13,7 +13,13 @@ class UniqueGroup(Group):
 
     def _solve_couples(self) -> bool:
         change = False
-        cells = sorted([(cell.bin_representation, cell) for cell in self.cells if len(cell.digits) == 2])
+        cells = sorted(
+            [
+                (cell.bin_representation, cell)
+                for cell in self.cells
+                if len(cell.digits) == 2
+            ]
+        )
         for i in range(len(cells) - 1):
             first_cell = cells[i][1]
             second_cell = cells[i + 1][1]
@@ -22,7 +28,11 @@ class UniqueGroup(Group):
                 for cell in self.cells:
                     if cell in [first_cell, second_cell]:
                         continue
-                    change = change or cell.remove_digit(first_digit) or cell.remove_digit(second_digit)
+                    change = (
+                        change
+                        or cell.remove_digit(first_digit)
+                        or cell.remove_digit(second_digit)
+                    )
         return change
 
     def solve(self) -> bool:

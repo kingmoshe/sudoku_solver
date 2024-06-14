@@ -19,7 +19,12 @@ def solve_board_recursive(b: Board, amount_of_steps, best_guesses_size):
         return
     guess_times = 0
     while not b.is_solved():
-        print(time.time() - START_TIME, FullGroup.TIME, FullGroup.GET_COUNTER_TIME, FullGroup.FIND_COUPLES_TIME)
+        print(
+            time.time() - START_TIME,
+            FullGroup.TIME,
+            FullGroup.GET_COUNTER_TIME,
+            FullGroup.FIND_COUPLES_TIME,
+        )
         wrong_guess = None
         best_guesses = []
         for guess in b.get_all_possible_guesses():
@@ -48,7 +53,7 @@ def solve_board_recursive(b: Board, amount_of_steps, best_guesses_size):
         random.shuffle(best_guesses)
         guess_times += 1
         for guess in best_guesses:
-            print('looking at', guess)
+            print("looking at", guess)
             new_b = calc_time(deepcopy, COPY_TIME, b)
             new_b.cells[guess.cell.i][guess.cell.j].set_num(guess.digit)
             try:

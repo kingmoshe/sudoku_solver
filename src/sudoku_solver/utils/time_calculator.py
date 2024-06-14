@@ -1,7 +1,7 @@
 from typing import Callable, List, Any, TypeVar
 import time
 
-T = TypeVar('T')
+T = TypeVar("T")
 
 
 def calc_time(func: Callable[[Any], T], timer: List[float], *args, **kwargs) -> T:

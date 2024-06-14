@@ -9,10 +9,10 @@ from sudoku_solver.classes.position import Position
 def get_board(name: str) -> Board:
     b = NormalBoard()
     cur_path = Path(os.path.abspath(__file__))
-    path = cur_path.parent.parent / 'resources' / 'sodukus' / name
-    with open(path, 'r') as f:
+    path = cur_path.parent.parent / "resources" / "sodukus" / name
+    with open(path, "r") as f:
         lines = f.readlines()
-    lines = [list(map(int, line.replace('\n', '').split())) for line in lines]
+    lines = [list(map(int, line.replace("\n", "").split())) for line in lines]
     for i in range(9):
         for j in range(9):
             if lines[i][j] != 0:

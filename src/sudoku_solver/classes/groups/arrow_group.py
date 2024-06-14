@@ -44,5 +44,7 @@ class ArrowGroup(Group):
         return sum([min(cell.digits) for cell in self.cells])
 
     def is_solved_correctly(self) -> bool:
-        return self.minimal_possible_sum() <= max(self.sum_cell.digits) and min(
-            self.sum_cell.digits) <= self.maximal_possible_sum()
+        return (
+            self.minimal_possible_sum() <= max(self.sum_cell.digits)
+            and min(self.sum_cell.digits) <= self.maximal_possible_sum()
+        )

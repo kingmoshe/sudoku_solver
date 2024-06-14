@@ -23,4 +23,6 @@ class LineGroup(FullGroup, UniqueGroup):
         return result
 
     def is_solved_correctly(self) -> bool:
-        return FullGroup.is_solved_correctly(self) and UniqueGroup.is_solved_correctly(self)
+        return FullGroup.is_solved_correctly(self) and UniqueGroup.is_solved_correctly(
+            self
+        )

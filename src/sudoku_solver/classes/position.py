@@ -15,4 +15,4 @@ class Position:
         return self.j < other.j
 
     def __repr__(self) -> str:
-        return f'{self.i}-{self.j}'
+        return f"{self.i}-{self.j}"

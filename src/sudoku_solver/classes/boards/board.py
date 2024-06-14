@@ -58,4 +58,9 @@ class Board:
         return cells
 
     def __repr__(self) -> str:
-        return '\n'.join([' '.join(map(str, [self.cells[i][j].num for j in range(9)])) for i in range(9)])
+        return "\n".join(
+            [
+                " ".join(map(str, [self.cells[i][j].num for j in range(9)]))
+                for i in range(9)
+            ]
+        )
