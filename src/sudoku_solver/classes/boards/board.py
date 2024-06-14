@@ -2,7 +2,7 @@ from typing import List
 import random
 
 from sudoku_solver.classes.cell import Cell
-from sudoku_solver.classes.guess import Guess
+from sudoku_solver.classes.boards.guess import Guess
 from sudoku_solver.classes.position import Position
 from sudoku_solver.classes.groups.group import Group
 from sudoku_solver.classes.boards.board_val import BoardVal
