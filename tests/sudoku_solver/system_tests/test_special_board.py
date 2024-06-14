@@ -7,12 +7,13 @@ from sudoku_solver.classes.boards.board_types.non_consecutive_board import add_n
     "board_name",
     [
         "puzzle_1.txt",
+        "puzzle_5.txt",
     ],
 )
 def test_non_consecutive(board_name):
     board = get_board(board_name, resource_path="../../resources/miracle_sudokus")
     add_non_consecutive_board_groups(board)
     board.solve_while_can()
-    print()
-    print(board)
+    #print()
+    #print(board)
     assert board.is_solved()
