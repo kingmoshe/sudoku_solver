@@ -1,4 +1,4 @@
-from sudoku_solver.classes.board import Board
+from sudoku_solver.classes.boards.board import Board
 from sudoku_solver.classes.groups.line_group import LineGroup
 
 

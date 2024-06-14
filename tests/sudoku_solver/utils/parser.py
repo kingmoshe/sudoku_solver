@@ -1,8 +1,8 @@
 from pathlib import Path
 import os
 
-from sudoku_solver.classes.board import Board
-from sudoku_solver.classes.normal_board import NormalBoard
+from sudoku_solver.classes.boards.board import Board
+from sudoku_solver.classes.boards.normal_board import NormalBoard
 from sudoku_solver.classes.position import Position
 
 

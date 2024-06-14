@@ -4,9 +4,7 @@ import time
 
 from sudoku_solver.utils.time_calculator import calc_time
 
-from sudoku_solver.classes.cell import Cell
-from sudoku_solver.classes.board import Board
-from sudoku_solver.classes.groups.line_group import LineGroup
+from sudoku_solver.classes.boards.board import Board
 from sudoku_solver.classes.groups.full_group import FullGroup
 
 START_TIME = time.time()

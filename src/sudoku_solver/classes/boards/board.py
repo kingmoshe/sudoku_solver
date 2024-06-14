@@ -5,7 +5,7 @@ from sudoku_solver.classes.cell import Cell
 from sudoku_solver.classes.guess import Guess
 from sudoku_solver.classes.position import Position
 from sudoku_solver.classes.groups.group import Group
-from sudoku_solver.classes.board_val import BoardVal
+from sudoku_solver.classes.boards.board_val import BoardVal
 
 
 class Board:
