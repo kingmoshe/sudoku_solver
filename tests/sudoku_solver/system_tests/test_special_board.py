@@ -56,7 +56,7 @@ def test_non_consecutive_complex(board_name):
     ],
 )
 def test_miracle_sudoku(board_name):
-    board = get_board(board_name, resource_path="../../resources/miracle_sudokus")
+    board = get_board(board_name, resource_path="../../resources/miracle_sudokus/miracle")
     add_miracle_board_groups(board)
     board.solve_while_can()
     assert board.is_solved()
