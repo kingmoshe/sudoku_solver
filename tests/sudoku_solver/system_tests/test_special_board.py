@@ -78,7 +78,7 @@ def test_miracle_sudoku(board_name):
     ],
 )
 def test_miracle_sudoku_complex(board_name):
-    board = get_board(board_name, resource_path="../../resources/miracle_sudokus")
+    board = get_board(board_name, resource_path="../../resources/miracle_sudokus/miracle")
     add_miracle_board_groups(board)
     solve_board_recursive(board, amount_of_steps=1, best_guesses_size=3)
     assert board.is_solved()
