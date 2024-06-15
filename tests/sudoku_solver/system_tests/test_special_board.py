@@ -14,6 +14,7 @@ from sudoku_solver.classes.boards.board_types.miracle_board import add_miracle_b
         "puzzle_12.txt",
         "puzzle_15.txt",
         "puzzle_61.txt",
+        "puzzle_63.txt",
     ],
 )
 def test_non_consecutive(board_name):
@@ -36,6 +37,9 @@ def test_non_consecutive(board_name):
         "puzzle_49.txt",
         "puzzle_54.txt",
         "puzzle_58.txt",
+        "puzzle_70.txt",
+        "puzzle_76.txt",
+        "puzzle_93.txt",
     ],
 )
 def test_non_consecutive_complex(board_name):
@@ -70,6 +74,7 @@ def test_miracle_sudoku(board_name):
         "puzzle_34.txt",
         "puzzle_37.txt",
         "puzzle_40.txt",
+        "puzzle_68.txt",
     ],
 )
 def test_miracle_sudoku_complex(board_name):
