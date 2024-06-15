@@ -30,6 +30,8 @@ def test_non_consecutive(board_name):
         "puzzle_8.txt",
         "puzzle_10.txt",
         "puzzle_29.txt",
+        "puzzle_35.txt",
+        "puzzle_38.txt",
     ],
 )
 def test_non_consecutive_complex(board_name):
@@ -61,6 +63,9 @@ def test_miracle_sudoku(board_name):
         "puzzle_22.txt",
         "puzzle_26.txt",
         "puzzle_32.txt",
+        "puzzle_34.txt",
+        "puzzle_37.txt",
+        "puzzle_40.txt",
     ],
 )
 def test_miracle_sudoku_complex(board_name):
