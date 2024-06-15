@@ -18,7 +18,7 @@ from sudoku_solver.classes.boards.board_types.miracle_board import add_miracle_b
     ],
 )
 def test_non_consecutive(board_name):
-    board = get_board(board_name, resource_path="../../resources/miracle_sudokus")
+    board = get_board(board_name, resource_path="../../resources/miracle_sudokus/non_consecutive")
     add_non_consecutive_board_groups(board)
     board.solve_while_can()
     print()
@@ -43,7 +43,7 @@ def test_non_consecutive(board_name):
     ],
 )
 def test_non_consecutive_complex(board_name):
-    board = get_board(board_name, resource_path="../../resources/miracle_sudokus")
+    board = get_board(board_name, resource_path="../../resources/miracle_sudokus/non_consecutive")
     add_non_consecutive_board_groups(board)
     solve_board_recursive(board, amount_of_steps=1, best_guesses_size=3)
     assert board.is_solved()
