@@ -26,6 +26,7 @@ def test_non_consecutive(board_name):
     "board_name",
     [
         "puzzle_8.txt",
+        "puzzle_10.txt",
     ],
 )
 def test_non_consecutive_complex(board_name):
