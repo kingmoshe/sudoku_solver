@@ -16,7 +16,7 @@ def test_easy(board_name):
     assert board.is_solved()
 
 
-@pytest.mark.parametrize("board_name", ["hard.txt", "expert.txt"])
+@pytest.mark.parametrize("board_name", ["expert.txt", "hard.txt"])
 def test_complex(board_name):
     board = get_board(board_name)
     solve_board_recursive(board, amount_of_steps=1, best_guesses_size=3)
